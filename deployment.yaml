@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: <YOUR_GITHUB_CONTAINER_REGISTRY_IMAGE_HERE>
+        image: https://github.com/gianfrancococchieri-commits/MySimpleApp
