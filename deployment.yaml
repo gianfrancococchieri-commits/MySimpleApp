@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-custom-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php-custom
+  template:
+    metadata:
+      labels:
+        app: php-custom
+    spec:
+      containers:
+      - name: php-app
+        image: <YOUR_GITHUB_CONTAINER_REGISTRY_IMAGE_HERE>
