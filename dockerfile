@@ -1,4 +1,4 @@
-FROM php:8.3-cli-alpine
+FROM php:8.3-cli
 WORKDIR /app
 # Copia app e wrapper
 COPY index.php /app/index.php
