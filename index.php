@@ -1,6 +1,10 @@
 <?php
+
 class Example {
     public function run() {
-        echo "Hello world\n";
+        return "Hello from Example::run()";
     }
 }
+
+$example = new Example();
+echo $example->run();
