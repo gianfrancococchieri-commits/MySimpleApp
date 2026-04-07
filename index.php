@@ -1,14 +1,12 @@
 <?php
-// Logic based on Dynatrace Custom Service examples [1]
 class InternalExample {
     public function say() {
         echo "Hello world!\n";
     }
 }
-
 class Example {
     public function __construct() {
-        // Tracing the class creation [4]
+        // constructor
     }
 
     public function run() {
@@ -16,11 +14,6 @@ class Example {
         $internal->say();
     }
 }
-
-// Execution loop: Ensure methods exit so data is reported [2]
-while(true) {
-    $exampleInstance = new Example();
-    $exampleInstance->run();
-    sleep(15); 
-}
-?>
+// Single execution, then exit
+$exampleInstance = new Example();
+$exampleInstance->run();
